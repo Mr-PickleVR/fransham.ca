@@ -1,17 +1,49 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
+<html>
 <head>
-  <title> Welcome To Fransham.Ca!</title>
-  <h1> This is the offical site for the Franshams(ontario canada)</h1>
+  <title>Home Page - Fransham.ca</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://web.fransham.ca/style.css">
 </head>
 <body>
-  <h1>Welcome!</h1>
-  <h2>Please Enjoy your stay here!</h2>
-  
-  
-  <p>--------------------------------------------------------------</p>
-  
-  
-  <h1> People</h1>
-  <p> Here you can a list of some of the people of the fransham family and a little bit about them written by them(if they were alive in/after 2023)!</p>
-  <a href="https://web.fransham.ca/People"><button>Click Me!</button></a>
+
+<div id="mySidebar" class="sidebar">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+  <a href="/People">People</a>
+  <a href="#">Family Tree</a>
+  <a href="#">Where We Are From</a>
+</div>
+
+
+
+<div id="main">
+  <button class="openbtn" onclick="openClose()">☰</button>  
+  <h2>Collapsed Sidebar</h2>
+  <p>Click on the hamburger menu/bar icon to open the sidebar, and push this content to the right.</p>
+</div>
+
+<script>
+ let state = false
+function openNav() {
+  document.getElementById("mySidebar").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+function openClose(){
+  if(state){
+    openNav()
+  }
+  else{
+    closeNav()
+  }
+  state = !state
+
+}
+</script>
+   
 </body>
+</html> 
